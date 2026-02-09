@@ -12,6 +12,8 @@ Setup completo per n8n self-hosted con database Postgres, supporto MCP (Model Co
 1.  **Configurazione Ambiente**
 
     ```bash
+    git clone https://github.com/rocco-giandomenico/n8n_selfhosted.git my_project
+    cd my_project
     cp .env.sample .env
     ```
 
