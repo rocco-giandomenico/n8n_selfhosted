@@ -36,6 +36,15 @@ services:
       - N8N_BASIC_AUTH_PASSWORD=${N8N_BASIC_AUTH_PASSWORD}
       - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY}
       - N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=${N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE}
+      - NODE_FUNCTION_ALLOW_EXTERNAL=axios
+      - N8N_RUNNERS_MAX_OLD_SPACE_SIZE=1024
+      - NODE_FUNCTION_ALLOW_BUILTIN=https
+      - N8N_HOST=${DOMAIN_NAME}
+      - N8N_PORT=${N8N_PORT}
+      - N8N_PROTOCOL=https
+      - NODE_ENV=production
+      - WEBHOOK_URL=https://${DOMAIN_NAME}/
+      - N8N_SECURE_COOKIE=true
     volumes:
       - ./n8n_data:/home/node/.n8n
     depends_on:
